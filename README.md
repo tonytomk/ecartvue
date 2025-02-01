@@ -1,6 +1,9 @@
 # easycart_v2
 
 ## Project setup
+Install node , npm and vuecli
+https://nodejs.org/en/download
+https://cli.vuejs.org/guide/installation.html
 ```
 npm install
 ```
