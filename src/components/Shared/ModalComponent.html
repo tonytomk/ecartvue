@@ -1,0 +1,26 @@
+<div class="modal-mask"  v-if="config.show" transition="modal">
+    <div class="modal-dialog" role="document">      
+      <div class="modal-content">
+        <!-- <div class="modal-logo">
+            <img class="logo" src=""/>
+        </div> -->
+        <div class="modal-header">
+            <div class="modal-title">
+              <strong>
+                <slot name="title"> </slot>
+              </strong>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" @click="cancel()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!-- <div class="alert alert-danger" v-if="config.errorMsg && config.errorMsg.length > 0">
+            <label class="control-label">{{config.errorMsg}}</label>
+          </div> -->
+          <slot name="body"></slot>
+        </div>
+        <div class="modal-footer" >
+          <slot name="footer"></slot>
+        </div>
+      </div>
+    </div>
+</div>

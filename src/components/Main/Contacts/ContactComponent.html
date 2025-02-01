@@ -1,0 +1,29 @@
+<form class="contact-form" @submit.prevent="sendMail()">
+    <div class="row--email">
+        <a href="mailto:ezcartapp@gmail.com"><font-awesome-icon class="icon" icon="envelope" color="orange" />Email</a>
+        <h2 class="header-contact">Contact Us</h2>
+    </div>
+<div class="row">
+    <label>Name</label>
+    <input v-model="mailOptions.name" required>
+</div>
+<div class="row">
+    <label>Email</label>
+    <input v-model="mailOptions.from" required type="email">
+</div>
+<div class="row">
+    <label>Subject</label>
+    <input v-model="mailOptions.subject" required>
+</div>
+<div class="row">
+    <label>Message</label>
+    <textarea cols="103" rows="10" v-model="mailOptions.body" required></textarea>
+</div>
+<div class="row--button">
+    <button type="submit" class="btn">Submit</button>
+</div>
+<div class="row"  v-if="isSuccess">
+    <label class="msg">Your message submitted succesfully</label>
+</div>
+
+</form>

@@ -1,0 +1,29 @@
+<div class="parent">
+<div class="main-cards">
+  <div class="cards" v-for="(key,index) in getPageData" :key="index">
+    <div class="card">
+    <div class="item-image">
+      <img :src="loadImage(key.imageLocalPath)" class="image">
+    </div>
+    <div class="item-title">
+      <span>{{key.bookTitle}}</span>
+      <span>Price : {{key.price}} ₹</span>
+    </div>
+    <div class="item-description"><span>{{key.category}}</span>
+      <span>
+        <button class="link-button" @click="more(key)">more &raquo;</button>
+      </span>
+    </div>
+    <div class="buttons">
+      <button class="btn" @click="addToCart(index)">Add to Cart</button>
+      <button class="btn">Buy Now</button>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="indexing">
+  <ul v-for="(item, index) in NumberOfPages" >
+    <a><li @click="changePage(item)">{{item}}</li></a>
+  </ul>
+</div>
+</div>

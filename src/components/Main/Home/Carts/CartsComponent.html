@@ -1,0 +1,43 @@
+<div>
+    <!-- <div class="grid-header">
+        <div>Product</div>
+        <div>Price</div>
+        <div>Quantity</div>
+        <div>Total</div>
+    </div>
+    <div class="data">
+        <div class="item-image">
+            <img src="../../../../assets/images/bg.jpg" class="image">
+            <span class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti mollitia iure natus nulla molestiae facilis minus sed quibusdam inventore quod.</span>
+        </div>
+        <div>20 $</div>
+        <div>1</div>
+        <div>20</div>
+    </div> -->
+    <table>
+        <thead>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </thead>
+        <tbody>
+            <tr v-for="(key,index) in cartCount" :key="index">
+                <td class="image-td">
+                <img src="../../../../assets/images/bg.jpg" class="image">
+                <span class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti mollitia iure natus nulla molestiae facilis minus sed quibusdam inventore quod.</span>
+                </td>
+                <td>20 $</td>
+                <td><input class="input" type="number" value="1"></td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="total">
+        <span>Total</span>
+        <span>80</span>
+    </div>
+    <div class="checkout">
+        <button class="btn" @click="checkout()">Checkout</button>
+    </div>
+</div>

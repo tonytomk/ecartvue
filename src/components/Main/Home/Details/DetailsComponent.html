@@ -1,0 +1,71 @@
+<div class="details">
+    <div class="left">
+    <div class="image-container"> 
+    <div class="zoom-on-hover" :class="{zoomed}" @touchstart="touchzoom"
+    @mousemove="move" @mouseenter="zoom" @mouseleave="unzoom" ref="container1">
+    <img :src="getImagePath" class="normal" ref="normal1" alt="image" >
+    <img :src="getImagePath" class="zoom1" ref="zoom1" alt="image"  > 
+    </div>
+    </div>
+    <div class="ratings"> 
+    <span >Ratings</span>
+    <span>
+    <font-awesome-icon class="icon" icon="star" color="orange" />
+    <font-awesome-icon class="icon" color="orange" icon="star" />
+    <font-awesome-icon class="icon " color="orange" icon="star" />
+    <font-awesome-icon class="icon " color="orange" icon="star" />
+    <font-awesome-icon class="icon" icon="star" />
+    4/5
+    </span>
+    </div>
+   </div>
+    <!--  <div
+    class="zoom-on-hover"
+    @mousemove="move($event)"
+    @mouseenter="zoom()"
+    @mouseleave="unzoom()">
+    <img class="normal" ref="normal" :src="getImagePath" />
+    <img class="zoom" ref="zoom" :src="getImagePath" />
+  </div> -->
+
+  <!-- <zoom-on-hover :img-normal="getImagePath" 
+  class="image" :scale="1.5" :img-zoom="getImagePath" ></zoom-on-hover> -->
+    <div class="items">
+      <h2>Sapiens A Brief History of humankind </h2>
+      <span>Author: Yuval Noha Harari</span>
+      <span>Category: Research</span>
+      <span>Price 100 $</span>
+      <span>
+        <button class="btn">Buy</button>
+      </span>
+      <p class="data">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque perferendis nam voluptates. Quasi eum ab autem est nostrum. Magni sequi et deserunt vitae deleniti eligendi? Totam neque accusantium odit.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quidem expedita veritatis ea error maiores maxime mollitia dolore similique aspernatur, est modi quisquam? Consectetur aperiam natus eum voluptates suscipit maxime?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil animi a laudantium veritatis molestias! Nobis sint, qui distinctio quod ipsum neque ab accusamus eveniet, maxime earum totam repellendus necessitatibus?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, odit! Reprehenderit, quaerat! Et debitis qui voluptates. Autem ea perspiciatis soluta inventore accusantium dolor harum aperiam, adipisci fuga necessitatibus officiis impedit?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae nesciunt commodi velit aut delectus alias minima cupiditate dolorum fuga quidem corporis, consequuntur tempore nulla! Qui iste laboriosam quae facilis?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam magnam facilis ipsum blanditiis illo error consectetur eligendi obcaecati quas nemo! Quia, eius. Perferendis, ad est dolores aliquid adipisci error nisi?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad explicabo, quas qui ipsum sed accusamus perspiciatis a commodi nam minima veniam nisi, enim quibusdam officia repellat recusandae quam rem maiores.
+      </p>
+      <div class="border"></div>
+      <div class="review">
+        <span>Write a review</span>
+        <span>Name : <input></span>
+        <span ref="infoBox" >
+          <!-- <font-awesome-icon class="icon-rating" icon="star" :class="{'color': item1 }"  @mousemove="mouse($event)" ></font-awesome-icon>
+          <font-awesome-icon class="icon-rating"  icon="star" @mousemove="mouse($event)" :class="{'color': item2 }" />
+          <font-awesome-icon class="icon-rating "  icon="star" @mousemove="mouse($event)" :class="{'color': item3 }" />
+          <font-awesome-icon class="icon-rating "  icon="star" @mousemove="mouse($event)"  :class="{'color': item4 }"/>
+          <font-awesome-icon class="icon-rating" icon="star" @mousemove="mouse($event)" :class="{'color': item5 }" /> -->
+          <font-awesome-icon class="icon-rating" icon="star"  :class="{'color': key.selected }"  @click="mouse($event, index)"    v-for="(key,index) in numberOfStars" :key="index"></font-awesome-icon>
+          {{getNoOfStars}}/{{numberOfStars.length}}
+        </span> 
+
+        <textarea name="message" rows="10" cols="90" class="ta" ></textarea>
+        <div>
+        <button class="btn">Submit</button>
+        <button class="btn" @click="back()">Back</button>
+       </div>
+      </div>
+    </div>
+   
+</div>

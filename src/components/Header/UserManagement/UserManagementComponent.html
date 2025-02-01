@@ -1,0 +1,13 @@
+<modal-component class="content" :config="config" @cancelled="cancelDialogue()">
+  <template v-slot:title>
+    {{dialogueTitile}}
+  </template>
+      <template v-slot:body class="modal-body">
+        <login-component v-if="switchForm === 0" @onSuccessLogin="successLogin()"></login-component>
+        <register-component v-else-if="switchForm === 1" @onSuccessLogin="successLogin()"></register-component>
+      </template>
+      <template v-slot:footer class="modal-footer">
+        <button v-if="switchForm === 0" class="button__link" @click="signUp()">Sign Up</button>
+        <button v-else-if="switchForm === 1" class="button__link" @click="login()">I already have an account</button>
+      </template>
+</modal-component>

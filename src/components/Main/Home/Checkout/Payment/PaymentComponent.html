@@ -1,0 +1,61 @@
+<div class="payment" ref="myform">
+    <div class="left">
+    <fieldset>
+    <legend>Information</legend>
+        <div class="info">
+            <label>Contact</label>
+            <label>some@come.com</label>
+            <button>Change</button>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Shipping</legend>
+            <div class="shipping">
+                <label>Ship To</label>
+                <label>Address 123, 232</label>
+                <button>Change</button>
+            </div>
+     </fieldset>
+     <fieldset>
+        <legend>Payment</legend>
+            <div class="payment" >
+                <span>
+                <input type="radio" id="one" value="One">
+                <label for="one">COD</label>
+                </span>
+                <span>
+                <input type="radio" id="two" value="Two" >
+                <label for="two">Online Payment</label>
+                </span>
+                <div class="btn">
+                    <button class="button" @click="payment($event)">Complete Payment</button>
+                </div>
+            </div>
+     </fieldset>
+    </div>
+    <div class="right">
+     <fieldset>
+        <legend>Cart</legend>
+            <div class="cart">
+                <div class="items">
+                    <label>Item1</label>
+                    <label>200₹</label>
+                </div>
+                <div class="items">
+                    <label>Item2</label>
+                    <label>100₹</label>
+                </div>
+                <div class="items">
+                    <label>Apply Coupon</label>
+                    <input>
+                    <button>Apply</button>
+                </div>
+                <div class="items">
+                    <label>Total</label>
+                    <label>300₹</label>
+                </div>
+            </div>
+     </fieldset>
+   
+    </div>
+</div>

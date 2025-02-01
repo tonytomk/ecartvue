@@ -1,0 +1,15 @@
+  <div class="autocomplete"  v-on:blur="closeResult()">
+    <input type="text"  v-model="search"
+    @input="onChange()"
+    @focus.prevent="onChange()"
+    @blur="closePopup()"
+     />
+    <div v-if="displayItems" class="autocomplete__results">
+    <div v-for="(result, index) in results"
+      :key="index"
+      @mousedown="setResult(result)"
+      class="autocomplete__result">
+      {{ result.value }}
+    </div>
+  </div>
+  </div>

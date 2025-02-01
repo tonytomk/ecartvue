@@ -1,0 +1,14 @@
+<div>
+<div class="header">
+    <router-link to="/"><font-awesome-icon class="icon" icon="bars" /></router-link>
+    <h1 class="main-header">eCart Home</h1>
+    <div class="user_section">
+        <span>{{welcometitle}}</span>
+        <font-awesome-icon class="icon" icon="user-circle" @click="loginClick()" />
+        <router-link to="/carts"><font-awesome-icon class="icon" icon="shopping-cart"/></router-link>
+        <span class="count" v-if="cartCount > 0">{{cartCount}}</span>
+    </div>
+ </div>
+ <user-management-component :config="loginConfig" :userManagement="userManagement"  @cancelled="cancel()" @switch-tab="switchTab()">
+</user-management-component>
+</div>

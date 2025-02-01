@@ -1,0 +1,20 @@
+<div class="parent">
+<div class="breadcrumb">
+    <!-- <ul class="bread-ul">
+        <li v-for="(breadcrumb,index) in breadcrumbList" :key="index" 
+        @click="routeTo(index)"
+        :class="{'linked':!!breadcrumb.to}">
+            {{breadcrumb.text}}
+        </li>
+    </ul> -->
+    <!-- <router-link to="info">Info</router-link> -->
+    <router-link to="/carts">Cart</router-link>
+    <router-link to="/checkout/info">Information</router-link>
+    <router-link to="/checkout/shipping">Shipping</router-link>
+    <router-link to="/checkout/payment">Payment</router-link>
+
+    <!-- <shipping-component></shipping-component> -->
+</div>
+ <router-view></router-view>
+
+</div>
